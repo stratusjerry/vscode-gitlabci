@@ -1,0 +1,81 @@
+{
+    "name": "gitlabci",
+    "version": "0.0.1",
+    "publisher": "EDITME",
+    "author": {
+        "name": "EDITME"
+    },
+    "license": "MIT",
+    "icon": "icon.png",
+    "description": "EDITME",
+    "displayName": "SaltStack",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/stratusjerry/vscode-gitlabci.git"
+    },
+    "bugs": {
+        "url": "https://github.com/stratusjerry/vscode-gitlabci/issues"
+    },
+    "categories": [
+        "Programming Languages",
+        "Formatters"
+    ],
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "gitlab-ci",
+                "aliases": [
+                    "Gitlab CI",
+                    "gitlabci"
+                ],
+                "configuration": "./jinja.configuration.json",
+                "filenamePatterns": [
+                    "/**.gitlab-ci.yml",
+                    "/*.gitlab-ci.yml",
+                    ".gitlab-ci.yml"
+                ],
+            },
+            {
+                "id": "sls",
+                "aliases": [
+                    "SaltStack",
+                    "salt",
+                    "saltcheck",
+                    "pillar"
+                ],
+                "extensions": [
+                    ".sls",
+                    ".tst"
+                ],
+                "configuration": "./jinja.configuration.json"
+            },
+            {
+                "id": "jinja",
+                "aliases": [
+                    "j2",
+                    "jinja2"
+                ],
+                "extensions": [
+                    ".jinja",
+                    ".j2"
+                ],
+                "configuration": "./jinja.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "jinja",
+                "scopeName": "source.jinja",
+                "path": "./syntaxes/jinja.json"
+            },
+            {
+                "language": "sls",
+                "scopeName": "text.yaml.jinja",
+                "path": "./syntaxes/sls.json"
+            }
+        ]
+    }
+}
